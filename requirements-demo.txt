@@ -1,0 +1,6 @@
+sentence-transformers
+matplotlib
+matplotlib-inline
+numpy
+seaborn
+scipy
