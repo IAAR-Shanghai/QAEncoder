@@ -50,6 +50,7 @@ Conical distribution hypothesis validation.
       </td>
     </tr>
 </table>
+
 ## Quick Start
 
 Set up the environment and run the demo script:
@@ -58,11 +59,11 @@ Set up the environment and run the demo script:
 git clone https://github.com/IAAR-Shanghai/QAEncoder.git
 cd QAEncoder
 
-conda create -n QAE python=3.9
+conda create -n QAE python=3.10
 conda activate QAE
 
 pip install -r requirements-demo.txt
-python demo.py
+python demo.py # Network is also required
 ```
 
 Results should be like:
@@ -70,6 +71,26 @@ Results should be like:
 ![demo-run](assets/demo_run.png)
 
 Change the embedding models, languages, documents and potential queries for verification of our hypothesis.
+
+## Reproduction on FIGNEWS
+We currently provide the core datasets and codes to reproduce results on FIGNEWS. The instruction is as follows:
+
+```bash
+cd FIGNEWS
+pip install -r requirements-fignews.txt
+pip uninstall llama-index-core
+pip install llama-index-core==0.11.1 # reinstall to avoid subtle bugs
+
+python download_model.py # Download bge-large-en-v1.5 model for alignment
+python QAE.py --method QAE_emb --alpha_value 0.0 --dataset_name figEnglish
+python QAE.py --method QAE_emb --alpha_value 0.5 --dataset_name figEnglish
+python QAE.py --method QAE_hyb --alpha_value 0.15 --beta_value 1.5 --dataset_name figEnglish
+```
+
+The results should be like:
+![QAE_emb_0.0](./assets/QAE_emb_0.0.png)
+![QAE_emb_0.5](./assets/QAE_emb_0.5.png)
+![alt text](./assets/QAE_hyb_0.15_1.5.png)
 
 ## Query Generation
 
