@@ -1,0 +1,9 @@
+personal_base =  "xxx"    
+personal_key = "xxx"
+default_gpt_model = "gpt-4o-mini"
+temperature_value = 0.85
+frequency_penalty_value = 0.1
+max_try_num = 15
+max_thread_num = 15
+LOG = False
+DEBUG = False

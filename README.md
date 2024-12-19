@@ -81,6 +81,8 @@ pip install -r requirements-fignews.txt
 pip uninstall llama-index-core
 pip install llama-index-core==0.11.1 # reinstall to avoid subtle bugs
 
+
+mkdir model output; unzip data.zip # setup datasets
 python download_model.py # Download bge-large-en-v1.5 model for alignment
 python QAE.py --method QAE_emb --alpha_value 0.0 --dataset_name figEnglish
 python QAE.py --method QAE_emb --alpha_value 0.5 --dataset_name figEnglish
@@ -88,9 +90,14 @@ python QAE.py --method QAE_hyb --alpha_value 0.15 --beta_value 1.5 --dataset_nam
 ```
 
 The results should be like:
+* python QAE.py --method QAE_emb --alpha_value 0.0 --dataset_name figEnglish
 ![QAE_emb_0.0](./assets/QAE_emb_0.0.png)
+
+* python QAE.py --method QAE_emb --alpha_value 0.5 --dataset_name figEnglish
 ![QAE_emb_0.5](./assets/QAE_emb_0.5.png)
-![alt text](./assets/QAE_hyb_0.15_1.5.png)
+
+* python QAE.py --method QAE_hyb --alpha_value 0.15 --beta_value 1.5 --dataset_name figEnglish
+![QAE_hyb_0.15_1.5](./assets/QAE_hyb_0.15_1.5.png)
 
 ## Query Generation
 
@@ -133,7 +140,7 @@ You are an expert in text comprehension and question formulation, tasked with ge
 ## TODO
 This work is currently under review and code refactoring. We plan to fully open-source our project in order.
 - [x] Release Demo
-- [ ] Release QAEncoder codes and datasets
+- [x] Release QAEncoder codes and datasets
 - [ ] Release QAEncoder codes compatible with Llamaindex and Langchain
 - [ ] Release QAEncoder++, our future works
 
