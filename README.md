@@ -1,6 +1,16 @@
-# QAEncoder: Towards Aligned Representation Learning in Question Answering Systems
+<h1 align="center">
+    QAEncoder: Towards Aligned Representation Learning 
+ 
+ in Question Answering Systems
+</h1>
 
+<p align="center">
  <a href='https://arxiv.org/abs/2409.20434'><img src='https://img.shields.io/badge/arXiv-2409.20434-b31b1b.svg'></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+ <a href="https://opensource.org/license/apache-2-0">
+    <img alt="Apache 2.0 License" src="https://img.shields.io/badge/License-Apache_2.0-4285f4.svg?logo=apache">
+</a>
+</p>
 
 Official implementation of our [QAEncoder](https://arxiv.org/abs/2409.20434) method for more advanced QA systems. 
 
@@ -8,7 +18,7 @@ Affiliation: Peking University, Institute for Advanced Algorithms Research, Shan
 
 ## Introduction
 Modern QA systems entail retrieval-augmented generation (RAG) for accurate and trustworthy responses. However, the inherent gap between user queries and relevant documents hinders precise matching. We introduce **QAEncoder**, a **training-free** approach to bridge this gap. Specifically, QAEncoder estimates the expectation of potential queries in the embedding space as a robust surrogate for the document embedding, and attaches document fingerprints to effectively distinguish these embeddings. 
-Extensive experiments across diverse datasets, languages and embedding models confirmed QAEncoder's alignment capability, which offers **a simply yet effective solution with zero additional index storage, retrieval latency, training costs, or risk of hallucination**.
+Extensive experiments across diverse datasets, languages and embedding models confirmed QAEncoder's alignment capability, which offers **a simple yet effective solution with zero additional index storage, retrieval latency, training costs, or risk of hallucination**.
 
 <table class="center">
     <tr>
@@ -90,13 +100,16 @@ python QAE.py --method QAE_hyb --alpha_value 0.15 --beta_value 1.5 --dataset_nam
 ```
 
 The results should be like:
-* python QAE.py --method QAE_emb --alpha_value 0.0 --dataset_name figEnglish
+> python QAE.py --method QAE_emb --alpha_value 0.0 --dataset_name figEnglish
+
 ![QAE_emb_0.0](./assets/QAE_emb_0.0.png)
 
-* python QAE.py --method QAE_emb --alpha_value 0.5 --dataset_name figEnglish
+> python QAE.py --method QAE_emb --alpha_value 0.5 --dataset_name figEnglish
+
 ![QAE_emb_0.5](./assets/QAE_emb_0.5.png)
 
-* python QAE.py --method QAE_hyb --alpha_value 0.15 --beta_value 1.5 --dataset_name figEnglish
+> python QAE.py --method QAE_hyb --alpha_value 0.15 --beta_value 1.5 --dataset_name figEnglish
+
 ![QAE_hyb_0.15_1.5](./assets/QAE_hyb_0.15_1.5.png)
 
 ## Query Generation
@@ -139,10 +152,11 @@ You are an expert in text comprehension and question formulation, tasked with ge
 
 ## TODO
 This work is currently under review and code refactoring. We plan to fully open-source our project in order.
-- [x] Release Demo
-- [x] Release QAEncoder codes and datasets
-- [ ] Release QAEncoder codes compatible with Llamaindex and Langchain
-- [ ] Release QAEncoder++, our future works
+
+* [x] Release Demo
+* [x] Release QAEncoder core codes and datasets
+* [ ] Release QAEncoder codes compatible with Llamaindex and Langchain
+* [ ] Release QAEncoder++, our future works
 
 
 ## 📖 BibTeX
