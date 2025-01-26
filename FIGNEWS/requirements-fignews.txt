@@ -5,4 +5,4 @@ llama-index-vector-stores-faiss==0.2.1
 llama-index-core==0.11.1
 loguru
 faiss-cpu
-huggingface-cli
+huggingface_hub
