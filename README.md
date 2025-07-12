@@ -1,12 +1,10 @@
 <h1 align="center">
-    QAEncoder: Towards Aligned Representation Learning 
- 
- in Question Answering Systems
+    QAEncoder: Towards Aligned Representation Learning in Question Answering Systems
 </h1>
 
 <p align="center">
- <a href='https://arxiv.org/abs/2409.20434'><img src='https://img.shields.io/badge/arXiv-2409.20434-b31b1b.svg'></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
+ <a href='https://arxiv.org/abs/2409.20434'><img src='https://img.shields.io/badge/arXiv-2409.20434-b31b1b.svg'></a> &nbsp;&nbsp;&nbsp;
+ <a href='https://huggingface.co/datasets/zr-wang/FIGNEWS_generated_queries'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-FIGNEWS-blue'></a>&nbsp;&nbsp;&nbsp;&nbsp;
  <a href="https://opensource.org/license/apache-2-0">
     <img alt="Apache 2.0 License" src="https://img.shields.io/badge/License-Apache_2.0-4285f4.svg?logo=apache">
 </a>
@@ -14,7 +12,7 @@
 
 Official implementation of our [QAEncoder](https://arxiv.org/abs/2409.20434) method for more advanced QA systems. 
 
-Affiliation: Peking University, Institute for Advanced Algorithms Research, Shanghai
+Affiliation: Peking University; Institute for Advanced Algorithms Research, Shanghai; Zhongguancun Academy.
 
 ## Introduction
 Modern QA systems entail retrieval-augmented generation (RAG) for accurate and trustworthy responses. However, the inherent gap between user queries and relevant documents hinders precise matching. We introduce **QAEncoder**, a **training-free** approach to bridge this gap. Specifically, QAEncoder estimates the expectation of potential queries in the embedding space as a robust surrogate for the document embedding, and attaches document fingerprints to effectively distinguish these embeddings. 
